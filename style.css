@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.description {
+    padding: 0 1em 1em 1em;
+}
+
+header {
+    display: block;
+    background-color: white;
+    font-family:"Verdana", sans-serif;
+    font-size: 1em;
+    color:#4e3a32;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+li {
+    display: inline-block;
+    padding: 0.5em 1em 0.5em 1em;
+}
+
+li:hover, footer > p > a:hover, .filmTitle:hover {
+    text-decoration: underline;
+    transition: 0.7s;
+}
+
+a:visited, 
+a:link {
+    color: #4e3a32;
+    text-decoration: none;
+}
+
+button { 
+    background-color: white;
+    color: #4e3a32;
+    font-size: 1em;
+    padding: 0.5em 1.5em;
+    border-radius: 5px;
+    border: 0px solid;
+    text-align: center;
+}
+
+.navButton {
+    width: 20vw;
+    min-width: 10vw;
+    margin: 1em;
+}
+
+.navButton:hover {
+    background-color: #967061;
+    transition: 0.5s;
+    color:white;
+}
+
+.home { 
+    background-color: rgb(255, 217, 188);
+    display: flex;
+}
+
+body {
+    font-family:"Tahoma", sans-serif;
+    color:#4e3a32;
+    font-size: 1em;
+}
+
+.about {
+    flex: 2;
+    text-align: center;
+    margin: 2em 2em 0 0;
+}
+
+.gallery {
+    flex: 3;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.5em;
+    grid-auto-rows: minmax(200px, auto);
+    grid-auto-columns: minmax(200px, auto);
+    margin: 1em 1em 1em 0;
+    position: relative;
+}
+
+.galleryHide {
+    visibility: hidden;
+}
+
+#blob {
+    width: 2em;
+}
+
+#loading {
+    animation: spin 1s infinite linear;
+    width: 5em;
+    height: 5em;
+    visibility: hidden;
+    position: absolute;
+
+}
+
+#loading.display {
+    visibility: visible;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.stack-top {
+    z-index: 9;
+    top:50%;
+    right: 50%;
+}
+
+.films {
+    display: flex;
+    margin-top: 2em;
+    background-image: url(assets/moviebg.jpg);
+    background-size: contain;
+    min-height: 40vw;
+    height: fit-content;
+}
+
+.selection {
+    flex: 1;
+    background-color:#b7e6f0;
+    padding: 1em 1em 1em 1em;
+    font-family: "Verdana", sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filmContainer { 
+    flex: 2;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.filmImage, .filmDetails { 
+    flex: 1;
+}
+
+.filmDetails { 
+    text-align: left;
+    padding: 1em 1em 1em 1em;
+    background-color: white;
+    opacity: 0.75;
+    border-radius: 5px;
+    margin: 1em 3em 1em 0;
+}
+
+.filmDetails > div {
+    margin-bottom: 1em;
+    font-size: 0.85em;
+}
+
+.filmImageSource {
+    width: 20vw;
+    height: auto;
+    object-fit: cover;
+    border: white 0.5em solid;
+}
+
+.selectionText > h1 {
+    margin: 2em 0 0.5em 0;
+}
+
+.selectionText > p {
+    margin-bottom: 1em;
+}
+
+.random {
+    background-color: #7bbcd6;
+    margin-bottom: 2em;
+}
+.random:hover {
+    color: white;
+    transition: 0.5s;
+}
+
+.divider {
+    margin-top: 3em;
+}
+
+.characters {
+    display: flex;
+    margin-top: 2em;
+    height: fit-content;
+}
+.characterSearch {
+    flex: 1;
+    background-color: rgb(255, 234, 166);
+    min-height: 20vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.characterContainer {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-image: url(assets/character-container.jpeg);
+    background-size: cover;
+    min-height: 20vw;
+}
+
+.characterDetails {
+    background-color: white;
+    opacity: 0.75;
+    border-radius: 5px;
+    margin: 1em 1em 1em 1em;
+}
+
+.characterDetails > div {
+    padding: 0.5em;
+    font-size: 0.85em
+}
+
+.characterSearchText {
+    text-align: center;
+    margin-top: 1em;
+}
+
+.no-match {
+    padding: 0 2em 1em 0;
+}
+
+.tiles {
+    width: 12vw;
+    height: 12vw;
+    object-fit: cover;
+    padding: 2em 0 1em 0;
+}
+
+.filmTitle {
+    padding-bottom: 1.5em;
+}
+
+.filmBox {
+    background-color: white;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.logo {
+    width: 25vw;
+    height: 12vw;
+    object-fit:fill;
+    padding: 4em 0 2em 0;
+}
+
+#searchInput, #submit, #dropdown{
+    background-color: white;
+    color: #4A455C;
+    padding: 0.7em;
+    border-radius: 5px;
+    border: 0px solid;
+}
+
+#searchInput {
+    min-width: 15vw;
+}
+
+#searchInput:hover {
+    outline:#ffb175 2px solid;
+}
+
+#submit { 
+    min-width: 8vw;
+    margin: 1em;
+    background-color:#ffb175;
+}
+
+#submit:hover {
+    color: white;
+    transition: 0.5s;
+}
+
+footer {
+    display: block;
+    background-color: white;
+    text-align: right;
+    margin: 0.5em 0;
+    font-size: 0.85em;
+}
+
+footer > p {
+    display: inline;
+    padding: 0em 1em;
+    color:#4e3a32;
+}
+
+footer > p > a {
+    text-decoration: none;
+    color:#4e3a32;
+}
+
+@media only screen and (max-width: 640px) {
+    .home, .films, .filmContainer, .characters {
+        flex-direction: column;
+    }
+
+    .gallery, .characterContainer {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0.5em;
+    }
+
+    .gallery, .filmImage, .filmDetails { 
+        margin: 1em; 
+    }
+
+    .navButton {
+        width: 200px;
+        min-width: fit-content;
+    }
+
+    .searchMatchNumber {
+        margin: 1em;
+    }
+
+    .tiles {
+        width: 25vw;
+        height: 25vw;
+        object-fit: cover;
+        padding: 2em 0 0 0;
+    }
+    
+    .filmTitle {
+        padding-bottom: 1.5em;
+    }
+
+    .logo {
+        padding: 2em 0 2em 0;
+    }
+}
+

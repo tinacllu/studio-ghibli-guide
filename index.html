@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <title>Studio Ghibli Guide</title>
+</head>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#films">Films</a></li>
+            <li><a href="#characters">Characters</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <section class = "home" id = "home">
+        <div class = "about">
+            <img class = "logo" src = "assets/logo.png" alt = "Studio Ghibli Logo"/>
+            <p class = "description">Dive into the magical world of Studio Ghibli films, where fiction blends seamlessly with reality.</p>
+            <a href="#films"><button class = "navButton">films</button></a>
+            <a href="#characters"><button class = "navButton">characters</button></a>
+        </div>
+
+        <div class = "gallery">
+            <!-- film image tiles go here -->
+            <div class = "stack-top" id = "loading"><img id = "blob" src = "assets/loading.png"></div>
+        </div>
+
+    </section> 
+
+    <section class = "films" id = "films">
+        <div class="filmContainer">
+            <!-- film image and information goes here -->
+        </div>
+        
+        <div class = "selection">
+            <div class = "selectionText">
+                <h1>Films</h1>
+                <p>Select a film to find out more details!</p>
+                <select id="dropdown">
+                    <option>Select a film</option>
+                </select>
+                <div class="divider">───── ⋆⋅☆⋅⋆ ─────</div>
+                <h1>Random Film Generator</h1>
+                <p>Pick a film for your next movie night!</p>
+                <button class = "random">generate</button>
+            </div>
+        </div>
+    </section>
+
+    <section class = "characters" id = "characters">
+        <div class = "characterSearch">
+            <div>
+            <h1 class = "characterSearchText">Characters</h1>
+            <form class = "characterSearchText" action = "#">
+                <label for = "searchInput">Look up your favourite character!</label>
+                <div class = "searchBar characterSearchText">
+                    <input id = "searchInput" type = "text" placeholder = "Character Name">
+                    <input id = "submit" type = "submit" value = "search">
+                </div>
+            <div class = "searchMatchNumber characterSearchText"></div>
+            </div>
+        </div>
+        <div class="characterContainer">
+            <!-- character information goes here -->
+        </div>
+        </form>
+    </section>
+
+    
+
+    <footer>
+    <p>Created at <a href="https://junocollege.com/">Juno College</a></p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
